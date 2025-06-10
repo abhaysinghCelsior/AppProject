@@ -16,7 +16,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import Config from "react-native-config";
 export const LINK=Config.LINK
 
-
 const stack = createStackNavigator()
 
 function App() {

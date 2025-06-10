@@ -1,0 +1,19 @@
+{
+  "build": {
+    "development": {
+      "extends": "production",
+      "distribution": "internal",
+      "developmentClient": true,
+      "android": {
+        // Allowed:
+        // "buildType", "gradleCommand", "resourceClass", "image",
+        // "ndk", "withoutCredentials", "autoIncrement", "applicationArchivePath"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      }
+    }
+  }
+}

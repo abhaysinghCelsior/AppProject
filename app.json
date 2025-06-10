@@ -2,6 +2,15 @@
   "expo": {
     "name": "AppProject",
     "slug": "AppProject",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "newArchEnabled": true,
+    "extra": {
+      "eas": {
+        "projectId": "93f2683f-88c5-4622-adad-40b565b40e4f"
+      }
+    },
+    "android": {
+      "package": "com.abhay007.AppProject"
+    }
   }
 }
