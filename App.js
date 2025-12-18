@@ -1,22 +1,64 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Button } from 'react-native';
+import Home from './components/Home';
+import Register from   './components/Register';
+import Login from   './components/Login';
+import Funds from   './components/Funds';
+import AddFunds from   './components/AddFunds';
+import UpdFunds from   './components/UpdFunds';
+import Portfolio from   './components/Portfolio';
+import Proposal from   './components/Proposal';
+import Recommend from   './components/Recommend';
+import RuntimeProcess from './components/RuntimeProcess';
+import ShortLongForOneSeq from './components/ShortLongForOneSeq';
+import RecommendationMenu from './components/RecommendationMenu';
+import ShowRecommendations from './components/ShowRecommendations';
+import Contants from 'expo-constants';
+import { createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Config from "react-native-config";
+export const LINK=Config.LINK
 
-export default function App() {
+
+const stack = createStackNavigator()
+
+function App() {
+  const onButtonPress = () => {
+  console.log('Button Pressed')
+  }
   return (
     <View style={styles.container}>
-      <Text>Hello Abhay - How are you!</Text>
-      <Text>This is time to build mobile app</Text>
-      <StatusBar style="auto" />
+     <stack.Navigator>
+      <stack.Screen name ="Login" component={Login}/> 
+      <stack.Screen name ="Register" component={Register}/> 
+      <stack.Screen name ="Home" component={Home}/>
+      <stack.Screen name ="Funds" component={Funds}/>
+      <stack.Screen name ="AddFunds" component={AddFunds}/>
+      <stack.Screen name ="UpdFunds" component={UpdFunds}/>
+      <stack.Screen name ="Portfolio" component={Portfolio}/>
+      <stack.Screen name ="Proposal" component={Proposal}/>
+      <stack.Screen name ="Recommend" component={Recommend}/>
+      <stack.Screen name ="RecommendationMenu" component={RecommendationMenu}/>
+      <stack.Screen name ="ShowRecommendations" component={ShowRecommendations}/>
+      <stack.Screen name ="RuntimeProcess" component={RuntimeProcess}/>
+      <stack.Screen name ="ShortLongForOneSeq" component={ShortLongForOneSeq}/>
+     </stack.Navigator>
     </View>
   );
 }
 
+export default() => {
+  return (
+    <NavigationContainer>
+      <App/>
+    </NavigationContainer>
+  )
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#eddfdf',
+    marginTop:Contants.statusBarHeight
   },
 });

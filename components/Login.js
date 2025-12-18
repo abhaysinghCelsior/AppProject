@@ -88,7 +88,7 @@ function LoginScreen(props) {
           />
         </View>
         <View style={styles.header}>
-          <Text style={styles.headerText}>Login to LyncVest</Text>
+          <Text style={styles.headerText}>Hello Abhay - How are you!{"\n"}This is time to build mobile app is coming</Text>
         </View>
         <View style={styles.card}>
           <View style={styles.inputContainer}>
